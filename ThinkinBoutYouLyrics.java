@@ -23,7 +23,7 @@ public class ThinkinBoutYouLyrics{
         System.out.println("");
         System.out.println("");
         System.out.println("");
-        System.out.println("Loose by Daniel Caesar");
+        System.out.println("Thinkin Bout You - Frank Ocean");
         lyricsDelay(lyrics, delay);
         System.out.println("");
         System.out.println("");
