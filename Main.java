@@ -86,6 +86,6 @@ public class Main{
 
                 }
             }
-        System.out.print("Byeeeers!");
+        System.out.print("Byeeeeeeeers!");
     }
 }
