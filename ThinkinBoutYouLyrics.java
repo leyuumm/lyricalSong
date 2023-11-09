@@ -4,6 +4,7 @@ public class ThinkinBoutYouLyrics{
         String[] lyrics = {
             "   A tornado flew around my room before you came",
             "   Excuse the mess it made, it usually doesn't rain",
+            "   In Southern California, much like Arizona",
             "   My eyes don't shed tears, but boy they pour when...",
             "   I'm thinking 'bout you (Ooh no, no, no)",
             "   I've been thinking 'bout you (You know, know, know)",
@@ -18,7 +19,7 @@ public class ThinkinBoutYouLyrics{
         }; // end of lyrics
 
         
-        int delay = 110;
+        int delay = 50;
         System.out.println("============================================================");
         System.out.println("");
         System.out.println("");
@@ -49,7 +50,7 @@ public class ThinkinBoutYouLyrics{
 
                     Thread.sleep(delay);
                 }
-                Thread.sleep(delay * 25);
+                Thread.sleep(delay * 10);
             }
         } catch(InterruptedException e){
             e.printStackTrace();
