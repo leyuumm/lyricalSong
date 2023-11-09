@@ -10,12 +10,23 @@ public class ThinkinBoutYouLyrics{
             "   I've been thinking 'bout you (You know, know, know)",
             "   I've been thinking 'bout you",
             "   Do you think about me still? Do ya, do ya?",
+            "   Or do you not think so far..... ahead",
+            "   Cause I been thinking bout forever,..... ooh",
+            "   Or do you not think so far........ ahead",
+            "   Cause I been thinking 'bout forever,..... ooh",
+            "   No, I don't like you, I just thought you were cool enough to kick it",
+            "   Got a beach house I could sell you in Idaho, since you think",
+            "   I don't love you I just thought you were cute, that's why I kissed you",
+            "   Got a fighter jet, I don't get to fly it though I'm lying down",
+            "   I'm thinking 'bout you (Ooh no, no, no)",
+            "   I've been thinking 'bout you (You know, know, know)",
+            "   I've been thinking 'bout you",
+            "   Do you think about me still? Do ya, do ya?",
             "   Or do you not think so far ahead",
             "   Cause I been thinking bout forever, ooh",
             "   Or do you not think so far ahead",
             "   Cause I been thinking 'bout forever, ooh",
-            "   No, I don't like you, I just thought you were cool enough to kick it",
-            "   Got a beach house I could sell you in Idaho, since you think",
+            "   Yes of course I remember, how could I forget how you feel?",
         }; // end of lyrics
 
         
@@ -50,7 +61,7 @@ public class ThinkinBoutYouLyrics{
 
                     Thread.sleep(delay);
                 }
-                Thread.sleep(delay * 10);
+                Thread.sleep(delay * 8);
             }
         } catch(InterruptedException e){
             e.printStackTrace();
