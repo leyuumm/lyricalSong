@@ -7,57 +7,49 @@ public class Main{
     public static void main(String[] args) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
         Scanner sc = new Scanner(System.in);
 
-        int selection;
-        String song =" ";
+        String[] songs = {
+            "Neu Roses - Daniel Caesar",
+            "Loose - Daniel Caesar",
+            "Thinkin Bout You - Frank Ocean"
+        };
 
         System.out.println("==================================");
         System.out.println("     CHOOSE A SONG TO PLAY! ");
         System.out.println("==================================");
-        System.out.println("1. Ikaw Pa Rin - Mrld");
-        System.out.println("2. Loose - Daniel Caesar");
-        System.out.println("3. DELULU - Zack Tabudlo");
-        selection = sc.nextInt();
 
-        switch(selection)
+        for(int i = 0; i < songs.length; i++)
         {
-            case 1:
-                song = "Ikaw Pa Rin";
-                System.out.println("=============================================");
-                System.out.println(" You've chosen 1. Ikaw Pa Rin - Mrld ");
-                System.out.println("=============================================");
-                break;
-
-            case 2:
-                song = "Loose";
-                System.out.println("=============================================");
-                System.out.println("You've chosen 2. Loose - Daniel Caesar ");
-                System.out.println("=============================================");
-                break;
-
-            case 3:
-                song = "DELULU";
-                System.out.println("=============================================");
-                System.out.println("You've chosen 3. DELULU - Zack Tabudlo ");
-                System.out.println("=============================================");
-                break;
-
-            default:
-                System.out.println("Invalid Choices");
+            System.out.println((i + 1) + ". " + songs[i]);
         }
 
-            File musicFile = new File("songs\\" + song + ".wav");
+            int selection = sc.nextInt();
 
+        if(selection < 1 || selection > songs.length)
+        {
+            System.out.println("Invalid Choice");
+            return;
+        }
+
+        String songTitle = songs[selection - 1];
+        String songFilename = "songs\\" + songTitle + ".wav";
+       
+
+            File musicFile = new File(songFilename);
             AudioInputStream audioStream = AudioSystem.getAudioInputStream(musicFile);
-
             Clip clip = AudioSystem.getClip();
-
             clip.open(audioStream);
 
+            System.out.println("============================================================");
+            System.out.println(" You've chosen " + selection + ". " + songTitle);
+            System.out.println("============================================================");
+
             String response = "";
+            boolean isPlaying = false;
+
             while(!response.equals("Q"))
             {
-                System.out.println("P = Play, S = Stop, R = Reset, Q = Quit");
-                System.out.println("=============================================");
+                System.out.println("P = Play, S = Stop, R = Reset, L = Show Lyrics, Q = Quit");
+                System.out.println("============================================================");
                 System.out.print("Enter your choice: ");
                 response = sc.next();
                 response = response.toUpperCase();
@@ -67,10 +59,16 @@ public class Main{
                 {
                     case ("P"): 
                         clip.start();
+                        isPlaying = true;
                     break;
 
                     case ("S"): 
                         clip.stop();
+                        isPlaying = false;
+                    break;
+
+                    case ("L"):
+                        displayLyrics(songTitle);
                     break;
 
                     case ("R"): 
@@ -87,5 +85,27 @@ public class Main{
                 }
             }
         System.out.print("Byeeeeeeeers!");
+    }
+
+
+    private static void displayLyrics(String songTitle)
+    {
+        switch(songTitle)
+        {
+            case "Neu Roses - Daniel Caesar":
+                NeuRosesLyrics.displayLyrics(songTitle);
+            break;
+
+            case "Loose - Daniel Caesar":
+                LooseLyrics.displayLyrics(songTitle);
+            break;
+
+            case "Thinkin Bout You - Frank Ocean":
+                ThinkinBoutYouLyrics.displayLyrics(songTitle);
+            break;
+
+            default:
+                System.out.println("No Lyrics for this selection");
+        }
     }
 }
