@@ -30,13 +30,15 @@ public class ThinkinBoutYouLyrics{
         }; // end of lyrics
 
         
-        int delay = 50;
+        int characterDelay = 130;
+        int lineDelay = 2000;
+
         System.out.println("============================================================");
         System.out.println("");
         System.out.println("");
         System.out.println("");
         System.out.println("Thinkin Bout You - Frank Ocean");
-        lyricsDelay(lyrics, delay);
+        lyricsDelay(lyrics, characterDelay, lineDelay);
         System.out.println("");
         System.out.println("");
         System.out.println("");
@@ -46,7 +48,7 @@ public class ThinkinBoutYouLyrics{
     }
 
 
-    private static void lyricsDelay(String[] lyrics, int delay)
+    private static void lyricsDelay(String[] lyrics, int characterDelay, int lineDelay)
     {
         try{
 
@@ -59,9 +61,9 @@ public class ThinkinBoutYouLyrics{
                     System.out.print(c);
 
 
-                    Thread.sleep(delay);
+                    Thread.sleep(characterDelay);
                 }
-                Thread.sleep(delay * 8);
+                Thread.sleep(lineDelay);
             }
         } catch(InterruptedException e){
             e.printStackTrace();

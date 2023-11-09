@@ -18,13 +18,15 @@ public class NeuRosesLyrics{
         }; // end of lyrics
 
         
-        int delay = 130;
+        int characterDelay = 130; // delay between characters in milliseconds
+        int lineDelay = 2000; // de;ay between lines in milliseconds (2 seconds)
+
         System.out.println("============================================================");
         System.out.println("");
         System.out.println("");
         System.out.println("");
         System.out.println("Neu Roses by Daniel Caesar");
-        lyricsDelay(lyrics, delay);
+        lyricsDelay(lyrics, characterDelay, lineDelay);
         System.out.println("");
         System.out.println("");
         System.out.println("");
@@ -34,7 +36,7 @@ public class NeuRosesLyrics{
     }
 
 
-    private static void lyricsDelay(String[] lyrics, int delay)
+    private static void lyricsDelay(String[] lyrics, int characterDelay, int lineDelay)
     {
         try{
 
@@ -47,9 +49,9 @@ public class NeuRosesLyrics{
                     System.out.print(c);
 
 
-                    Thread.sleep(delay);
+                    Thread.sleep(characterDelay);
                 }
-                Thread.sleep(delay * 10);
+                Thread.sleep(lineDelay);
             }
         } catch(InterruptedException e){
             e.printStackTrace();

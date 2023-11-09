@@ -18,13 +18,15 @@ public class LooseLyrics{
         }; // end of lyrics
 
         
-        int delay = 110;
+        int characterDelay = 130;
+        int lineDelay = 2000;
+
         System.out.println("============================================================");
         System.out.println("");
         System.out.println("");
         System.out.println("");
         System.out.println("Loose by Daniel Caesar");
-        lyricsDelay(lyrics, delay);
+        lyricsDelay(lyrics, characterDelay, lineDelay);
         System.out.println("");
         System.out.println("");
         System.out.println("");
@@ -34,7 +36,7 @@ public class LooseLyrics{
     }
 
 
-    private static void lyricsDelay(String[] lyrics, int delay)
+    private static void lyricsDelay(String[] lyrics, int characterDelay, int lineDelay)
     {
         try{
 
@@ -47,12 +49,13 @@ public class LooseLyrics{
                     System.out.print(c);
 
 
-                    Thread.sleep(delay);
+                    Thread.sleep(characterDelay);
                 }
-                Thread.sleep(delay * 25);
+                Thread.sleep(lineDelay);
             }
         } catch(InterruptedException e){
             e.printStackTrace();
         }
     }
 }
+
