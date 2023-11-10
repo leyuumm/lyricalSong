@@ -84,7 +84,9 @@ public class Main{
 
                 }
             }
-        System.out.print("Byeeeeeeeers!");
+        System.out.println("=====================");
+        System.out.println("Byeeeeeeeers!");
+        System.out.println("=====================");
     }
 
 

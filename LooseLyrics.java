@@ -4,8 +4,10 @@ public class LooseLyrics{
         String[] lyrics = {
             "   If you ever start to wonder",
             "   Why all the rain and all the thunder follows her around",
+            "                                ",
             "   You better cut that girl loose",
             "   Most of the time everything's fine",
+            "         ",
             "   But as soon as she starts to whine",
             "   If you have no patience",
             "   You better cut that girl loose",
@@ -15,10 +17,30 @@ public class LooseLyrics{
             "   Then do what you said you can",
             "   And do it for her",
             "   You better cut that girl loose, ah",
+            "   Set her free",
+            "   Let her be",
+            "                                                ",
+            "                                                 ",
+            "   Leave her be",
+            "   Oh, yes",
+            "                                                  ",
+            "                                                  ",
+            "   You don't love me anymore",
+            "   Let's see how you like this song",
+            "               ",
+            "   See you walking out the door",
+            "   Wonder why it took you so long",
+            "                            ",
+            "   Ever since the day that I met you",
+            "                            ",
+            "   Knew you were the girl of my dreams",
+            "   But we could never be",
+            "                             ",
+            "                             ",
         }; // end of lyrics
 
         
-        int characterDelay = 130;
+        int characterDelay = 90;
         int lineDelay = 2000;
 
         System.out.println("============================================================");
