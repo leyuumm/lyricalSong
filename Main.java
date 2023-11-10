@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.io.File;
 import javax.sound.sampled.*;
@@ -22,7 +23,14 @@ public class Main{
             System.out.println((i + 1) + ". " + songs[i]);
         }
 
-            int selection = sc.nextInt();
+            int selection = 0;
+
+            try{
+                selection = sc.nextInt();
+            } catch(InputMismatchException e){
+                System.out.println("Invalid input. Please input a valid integer");
+                return;
+            }
 
         if(selection < 1 || selection > songs.length)
         {
