@@ -25,18 +25,22 @@ public class Main{
 
             int selection = 0;
 
-            try{
-                selection = sc.nextInt();
-            } catch(InputMismatchException e){
-                System.out.println("Invalid input. Please input a valid integer");
-                return;
-            }
+            while(true)
+            {
+                try{
+                     System.out.println("Enter the number of the song you want to play: ");
+                    selection = sc.nextInt();
 
-        if(selection < 1 || selection > songs.length)
-        {
-            System.out.println("Invalid Choice");
-            return;
-        }
+                    if(selection >= 1 && selection <= songs.length){
+                    break; // Valid selection, exit the loop 
+                    } else{
+                    System.out.println("Invalid Choice. Please input a number only");
+                    }
+                } catch(InputMismatchException e){
+                    System.out.println("Invalid input. Please input a valid integer");
+                    sc.nextLine();
+                }
+            }
 
         String songTitle = songs[selection - 1];
         String songFilename = "songs\\" + songTitle + ".wav";
