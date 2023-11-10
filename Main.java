@@ -72,7 +72,6 @@ public class Main{
             System.out.println("============================================================");
 
             String response = "";
-            boolean isPlaying = false;
 
             while(!response.equals("Q"))
             {   
@@ -88,12 +87,10 @@ public class Main{
                 {
                     case ("P"): 
                         clip.start();
-                        isPlaying = true;
                     break;
 
                     case ("S"): 
                         clip.stop();
-                        isPlaying = false;
                     break;
 
                     case ("L"):
@@ -117,6 +114,8 @@ public class Main{
         System.out.println("=====================");
         System.out.println("Byeeeeeeeers!");
         System.out.println("=====================");
+
+        sc.close();
     }
 
     // Displays lyrics for the selected song 
