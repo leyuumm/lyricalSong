@@ -11,9 +11,15 @@ public class ThinkinBoutYouLyrics{
             "   I've been thinking 'bout you",
             "   Do you think about me still? Do ya, do ya?",
             "   Or do you not think so far..... ahead",
+            "                                           ",
+             "                                           ",
             "   Cause I been thinking bout forever,..... ooh",
+            "                                           ",
+             "                    ",
             "   Or do you not think so far........ ahead",
+            "                                           ",
             "   Cause I been thinking 'bout forever,..... ooh",
+             "                                       ",
             "   No, I don't like you, I just thought you were cool enough to kick it",
             "   Got a beach house I could sell you in Idaho, since you think",
             "   I don't love you I just thought you were cute, that's why I kissed you",
@@ -23,15 +29,40 @@ public class ThinkinBoutYouLyrics{
             "   I've been thinking 'bout you",
             "   Do you think about me still? Do ya, do ya?",
             "   Or do you not think so far ahead",
+             "                                           ",
+              "                                      ",
             "   Cause I been thinking bout forever, ooh",
+             "                                           ",
             "   Or do you not think so far ahead",
+             "                                           ",
             "   Cause I been thinking 'bout forever, ooh",
+             "                                          ",
+              "                                    ",
             "   Yes of course I remember, how could I forget how you feel?",
+             "                                          ",
+              "                               ",
+            "   You know you were my first time, a new feel",
+             "                                        ",
+            "   It will never get old, not in my soul, not in my spirit, keep it alive",
+             "                               ",
+            "   We'll go down this road 'til it turns from color to black and white",
+             "               ",
+            "   Or do you not think so far ahead",
+             "                                           ",
+             "             ",
+            "   Cause I been thinking bout forever, ooh",
+             "                                           ",
+              "                                       ",
+            "   Or do you not think so far ahead",
+             "                                             ",
+             "             ",
+            "   Cause I been thinking 'bout forever, ooh",
+             "                                           ",
         }; // end of lyrics
 
         
-        int characterDelay = 130;
-        int lineDelay = 2000;
+        int characterDelay = 40;
+        int lineDelay = 1000;
 
         System.out.println("============================================================");
         System.out.println("");
