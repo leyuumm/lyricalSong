@@ -28,15 +28,18 @@ public class Main{
             while(true)
             {
                 try{
-                     System.out.println("Enter the number of the song you want to play: ");
+                    System.out.println("===================================================");
+                    System.out.println("Enter the number of the song you want to play: ");
                     selection = sc.nextInt();
 
-                    if(selection >= 1 && selection <= songs.length){
-                    break; // Valid selection, exit the loop 
-                    } else{
-                    System.out.println("Invalid Choice. Please input a number only");
-                    }
+                        if(selection >= 1 && selection <= songs.length){
+                            break; // Valid selection, exit the loop 
+                        } else{
+                        System.out.println("Invalid Choice. Please input a number only");
+                        }
+                        
                 } catch(InputMismatchException e){
+                    System.out.println("===================================================");
                     System.out.println("Invalid input. Please input a valid integer");
                     sc.nextLine();
                 }

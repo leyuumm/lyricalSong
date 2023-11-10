@@ -28,6 +28,7 @@ public class NeuRosesLyrics{
             "   You're always taking my breath away",
             "                                                         ",
             "                                                         ",
+            "                                   ",
             "   Should've left you a long time ago",
             "   All my niggas done told me so",
             "   But my niggas don't hold me tight",
@@ -48,8 +49,8 @@ public class NeuRosesLyrics{
         }; // end of lyrics
 
         
-        int characterDelay = 50; // delay between characters in milliseconds
-        int lineDelay = 2000; // de;ay between lines in milliseconds (2 seconds)
+        int characterDelay = 40; // delay between characters in milliseconds
+        int lineDelay = 2000; // delay between lines in milliseconds (2 seconds)
 
         System.out.println("============================================================");
         System.out.println("");
