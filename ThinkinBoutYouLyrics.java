@@ -1,7 +1,12 @@
 public class ThinkinBoutYouLyrics{
+
+    // Method to display lyrics for a specific song
     public static void displayLyrics(String songTitle)
     {
+        // Lyrics for the song "Thinkin Bout You" by Frank Ocean 
+        // By the way this song is about Jelian. aw HAHAHAHAHAHA!
         String[] lyrics = {
+            // Lyrics lines...
             "   A tornado flew around my room before you came",
             "   Excuse the mess it made, it usually doesn't rain",
             "   In Southern California, much like Arizona",
@@ -58,18 +63,18 @@ public class ThinkinBoutYouLyrics{
              "             ",
             "   Cause I been thinking 'bout forever, ooh",
              "                                           ",
-        }; // end of lyrics
+        }; // End of lyrics
 
-        
-        int characterDelay = 40;
-        int lineDelay = 1000;
+        // Setting the delay between characters and lines
+        int characterDelay = 40; // delay between characters in milliseconds
+        int lineDelay = 1000; // delay between lines in milliseconds (1 seconds)
 
         System.out.println("============================================================");
         System.out.println("");
         System.out.println("");
         System.out.println("");
         System.out.println("Thinkin Bout You - Frank Ocean");
-        lyricsDelay(lyrics, characterDelay, lineDelay);
+        lyricsDelay(lyrics, characterDelay, lineDelay);  // Displays lyrics with specified character and line delay
         System.out.println("");
         System.out.println("");
         System.out.println("");
@@ -78,25 +83,31 @@ public class ThinkinBoutYouLyrics{
         System.out.println("============================================================");
     }
 
-
+    // Method to display lyrics with character and line delays
     private static void lyricsDelay(String[] lyrics, int characterDelay, int lineDelay)
     {
+        // Using try and catch to handle exceptions
         try{
-
+            // Looping through each line in the 'lyrics' array
             for(String line: lyrics)
             {
                 System.out.println("\r");
 
+                // Looping through each character in the current 'line'  
                 for(char c: line.toCharArray())
                 {
+                    // Print the character to the console
                     System.out.print(c);
 
-
+                    // Pause for a specified 'delay' in milliseconds
                     Thread.sleep(characterDelay);
                 }
+                // Wait for the specified line delay after each line
                 Thread.sleep(lineDelay);
             }
         } catch(InterruptedException e){
+            // If an InterruptedException is thrown (e.g., when using Thread.sleep)
+            // Print the stack trace to the console to help with debugging
             e.printStackTrace();
         }
     }
