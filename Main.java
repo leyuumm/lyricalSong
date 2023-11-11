@@ -73,8 +73,8 @@ public class Main{
 
             String response = "";
 
-            while(!response.equals("Q"))
-            {   
+            // Using do while to play the song again by inputting the "P" = Play
+            do{   
                 // User menu for controlling the song
                 System.out.println("P = Play, S = Stop, R = Reset, L = Show Lyrics, Q = Quit");
                 System.out.println("============================================================");
@@ -86,6 +86,7 @@ public class Main{
                 switch(response)
                 {
                     case ("P"): 
+                        clip.setMicrosecondPosition(0);
                         clip.start();
                     break;
 
@@ -109,7 +110,8 @@ public class Main{
                         System.out.println("Not a valid response");
 
                 }
-            }
+            }while(!response.equals("Q"));
+
         // Farewell message
         System.out.println("=====================");
         System.out.println("Byeeeeeeeers!");
